@@ -47,7 +47,7 @@ function Header(props) {
                   <i className="fa fa-2x fa-shopping-cart" />
                   Pizza<strong> Shop</strong>
                   <br />
-                  <span>Get your pizza on Door </span>
+                  <span>Get your pizzza on Door </span>
                 </span>
               </a>
             </div>
