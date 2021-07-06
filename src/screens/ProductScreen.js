@@ -12,7 +12,7 @@ const ProductScreen = (props) => {
   const productList = useSelector((state) => state.productList);
 
   const { product, loading, error } = productDetails;
-  const { product } = productList;
+  const { products } = productList;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const ProductScreen = (props) => {
                           <div className="simpleLens-container">
                             <div className="simpleLens-big-image-container">
                               <img
-                                src={product.image}
+                                src={products.image}
                                 alt="image"
                                 className="simpleLens-big-image"
                               />
@@ -67,10 +67,10 @@ const ProductScreen = (props) => {
                     {/* Modal view content */}
                     <div className="col-md-7 col-sm-7 col-xs-12">
                       <div className="aa-product-view-content">
-                        <h3>{product.name}</h3>
+                        <h3>{products.name}</h3>
                         <div className="aa-price-block">
                           <span className="aa-product-view-price">
-                            Rs.{product.price}
+                            Rs.{products.price}
                           </span>
                           <br />
                           <br />
@@ -88,7 +88,7 @@ const ProductScreen = (props) => {
                                 setQty(e.target.value);
                               }}
                             >
-                              {[...Array(product.countInStock).keys()].map(
+                              {[...Array(products.countInStock).keys()].map(
                                 (x) => (
                                   <option key={x + 1} value={x + 1}>
                                     {x + 1}
