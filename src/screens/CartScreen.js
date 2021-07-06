@@ -64,7 +64,7 @@ const CartScreen = (props) => {
                             cartItems.map((item) => (
                               <tr>
                                 <td>
-                                  // eslint-disable-next-line
+                                  {/* // eslint-disable-next-line */}
                                   <a href="#">
                                     <img src={item.image} alt="product" />
                                   </a>
@@ -94,11 +94,11 @@ const CartScreen = (props) => {
                                     )}
                                   </select>
                                 </td>
-                                <td>${item.price}</td>
+                                <td>Rs.{item.price}</td>
                                 <td>
-                                  // eslint-disable-next-line
+                                  {/* // eslint-disable-next-line */}
                                   <a className="remove" href="#">
-                                    <fa
+                                    <a
                                       onClick={() =>
                                         removeFromCartHandler(item.product)
                                       }
@@ -121,13 +121,13 @@ const CartScreen = (props) => {
                         <tr>
                           <th>Subtotal</th>
                           <td>
-                            Rs.{" "}
+                            Rs.
                             {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
                           </td>
                         </tr>
                       </tbody>
                     </table>
-                    // eslint-disable-next-line
+                    {/* // eslint-disable-next-line */}
                     <a
                       href="#"
                       className="aa-cart-view-btn"

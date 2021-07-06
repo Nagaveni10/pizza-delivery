@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function Header(props) {
-  // const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart);
 
   const checkoutHandler = () => {
     props.history.push("/shipping");
@@ -17,7 +17,7 @@ function Header(props) {
       <div className="header-top">
         <ul className="head-top-nav-right">
           <li className="hidden-xs">
-            // eslint-disable-next-line
+            {/* // eslint-disable-next-line */}
             <a href="#" style={{ textDecoration: "none" }}>
               Login
             </a>
@@ -71,9 +71,9 @@ function Header(props) {
           <li className="searchbar">
             <div className="cartbox">
               <Link to="/cart" style={{ textDecoration: "none" }}>
+                {/* // eslint-disable-next-line */}
                 <a
                   className="cart-link"
-                  // eslint-disable-next-line
                   href="#"
                   style={{ textDecoration: "none" }}
                   onClick={checkoutHandler}

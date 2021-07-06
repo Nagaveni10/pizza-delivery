@@ -7,6 +7,8 @@ import {
   // CART_SAVE_PAYMENT,
 } from "../constants/cartConstants";
 
+import { products as data } from "./data.js";
+
 const addToCart = (productId, qty) => async (dispatch, getsState) => {
   try {
     // const { data } = await fetch(
@@ -17,10 +19,12 @@ const addToCart = (productId, qty) => async (dispatch, getsState) => {
     // )
     //   .then((response) => response.json())
     //   .then((data) => console.log(data));
-    const { data } = await Axios.get(
-      "https://609e2a6333eed80017957dff.mockapi.io/products/" + productId
-      // "https://recipedb-nagu.herokuapp.com/products/" + productId
-    );
+    // const { data } = await Axios
+    //   .get
+    //   // "https://609e2a6333eed80017957dff.mockapi.io/products/" + productId
+    //   // "https://recipedb-nagu.herokuapp.com/products/" + productId
+    //   ();
+
     // const { data } = await Axios.get("/api/products/" + productId);
     dispatch({
       type: CART_ADD_ITEM,

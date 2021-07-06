@@ -7,6 +7,7 @@ import {
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
 } from "../constants/productContainers";
+import { products as data } from "./data.js";
 
 const listProducts = () => async (dispatch) => {
   try {
@@ -18,10 +19,10 @@ const listProducts = () => async (dispatch) => {
     //     method: "GET",
     //   }
     // );
-    const { data } = await Axios.get(
-      "https://609e2a6333eed80017957dff.mockapi.io/products/"
-      // "https://recipedb-nagu.herokuapp.com/products/"
-    );
+    // const { data } = await Axios.get(
+    //   "https://609e2a6333eed80017957dff.mockapi.io/products/"
+    //   // "https://recipedb-nagu.herokuapp.com/products/"
+    // );
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
@@ -40,10 +41,10 @@ const detailsProduct = (productId) => async (dispatch) => {
     //   },
     //   productId
     // );
-    const { data } = await Axios.get(
-      "https://609e2a6333eed80017957dff.mockapi.io/products/" + productId
-      // "https://recipedb-nagu.herokuapp.com/products/" + productId
-    );
+    // const { data } = await Axios.get(
+    //   "https://609e2a6333eed80017957dff.mockapi.io/products/" + productId
+    //   // "https://recipedb-nagu.herokuapp.com/products/" + productId
+    // );
     console.log("Actio Data Apai", data);
 
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });

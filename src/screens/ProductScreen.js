@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
-
+import { products } from "../actions/data.js";
 import { detailsProduct } from "../actions/productActions";
 // import Header from "../components/Header";
 
