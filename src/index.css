@@ -1,0 +1,148 @@
+/* html {
+  /* background: linear-gradient(to right, rgb(241, 167, 173), rgb(241, 167, 14)); */
+/* background-color: rgb(241, 167, 173); */
+/* display: "flex"; 
+} */
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  font: 1.2rem Helvetica;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 
+@media (min-width: 800px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+#header {
+  grid-area: header;
+  background-color: white;
+  color: #070707;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.header-top {
+  /* display: flex; */
+  justify-content: right;
+  /* position: absolute; */
+  /* right: 250px; */
+}
+
+ul.head-top-nav-right {
+  list-style-type: none;
+  text-decoration: none;
+}
+li.hidden-xs {
+  float: right;
+  padding: 5px 10px 0px 5px;
+}
+
+.fa {
+  color: rgb(236, 62, 56);
+}
+
+ul.head-bottom-nav-right {
+  list-style-type: none;
+  background-color: white;
+  overflow: hidden;
+  align-items: center;
+}
+li.searchbar {
+  padding: 0px 10px 0px 10px;
+  display: inline-block;
+}
+.input {
+  width: 850px;
+  height: 25px;
+}
+
+#menu {
+  background-color: rgb(236, 62, 56);
+  height: 30px;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin-left: 100px;
+}
+li.list {
+  display: inline-block;
+  padding-right: 70px;
+}
+#footer {
+  background-color: rgb(34, 33, 33);
+  color: rgb(155, 151, 151);
+}
+ul.footer-widget {
+  list-style-type: none;
+}
+ul.footer-nav {
+  list-style-type: none;
+}
+li.alignment {
+  display: inline-block;
+}
+ul.footer-social {
+  list-style-type: none;
+  /* float: right; */
+  margin-left: 50px;
+}
+li.social {
+  display: inline-block;
+}
+.modal-dialog {
+  background-color: grey;
+  text-align: center;
+}
+ul.product-catg {
+  list-style-type: none;
+}
+li.product-list {
+  display: inline-block;
+}
+
+/* HomeScreen*/
+.cards {
+  width: 25rem;
+  display: grid;
+  padding: 15px;
+}
+
+.about {
+  overflow: "hidden";
+  text-align: "justify";
+  color: "grey";
+}
+.favicon {
+  /* marginLeft: "auto"; */
+  color: "brown";
+}
+
+@media (min-width: 800px) {
+  .product-catg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 1000px? 3 columns */
+
+@media (min-width: 1000px) {
+  .product-catg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
