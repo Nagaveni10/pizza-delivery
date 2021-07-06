@@ -57,21 +57,25 @@ function Footer() {
           </div>
           <ul className="footer-social">
             <li className="social">
+              // eslint-disable-next-line
               <a href="#">
                 <span className="fa fa-facebook" />
               </a>
             </li>
             <li className="social">
+              // eslint-disable-next-line
               <a href="#">
                 <span className="fa fa-twitter" />
               </a>
             </li>
             <li className="social">
+              // eslint-disable-next-line
               <a href="#">
                 <span className="fa fa-google-plus" />
               </a>
             </li>
             <li className="social">
+              // eslint-disable-next-line
               <a href="#">
                 <span className="fa fa-youtube" />
               </a>
@@ -105,6 +109,7 @@ function Footer() {
             </button>
 
             <p className="lost-password">
+              // eslint-disable-next-line
               <a href="#" style={{ textDecoration: "none" }}>
                 Lost your password?
               </a>

@@ -19,8 +19,8 @@ const listProducts = () => async (dispatch) => {
     //   }
     // );
     const { data } = await Axios.get(
-      // "https://609e2a6333eed80017957dff.mockapi.io/products/"
-      "https://recipedb-nagu.herokuapp.com/products/"
+      "https://609e2a6333eed80017957dff.mockapi.io/products/"
+      // "https://recipedb-nagu.herokuapp.com/products/"
     );
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -41,8 +41,8 @@ const detailsProduct = (productId) => async (dispatch) => {
     //   productId
     // );
     const { data } = await Axios.get(
-      // "https://609e2a6333eed80017957dff.mockapi.io/products/" + productId
-      "https://recipedb-nagu.herokuapp.com/products/" + productId
+      "https://609e2a6333eed80017957dff.mockapi.io/products/" + productId
+      // "https://recipedb-nagu.herokuapp.com/products/" + productId
     );
     console.log("Actio Data Apai", data);
 

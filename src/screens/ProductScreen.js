@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 
 import { detailsProduct } from "../actions/productActions";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 
 const ProductScreen = (props) => {
   const [qty, setQty] = useState(1);
@@ -12,7 +12,7 @@ const ProductScreen = (props) => {
   const productList = useSelector((state) => state.productList);
 
   const { product, loading, error } = productDetails;
-  const { products } = productList;
+  const { product } = productList;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -56,6 +56,7 @@ const ProductScreen = (props) => {
                             <div className="simpleLens-big-image-container">
                               <img
                                 src={product.image}
+                                alt="image"
                                 className="simpleLens-big-image"
                               />
                             </div>

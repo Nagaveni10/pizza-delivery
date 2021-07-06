@@ -18,7 +18,7 @@ const CartScreen = (props) => {
   };
   useEffect(() => {
     if (productId) {
-      dispatch(addToCart(productId, qty));
+      dispatch(addToCart(productId, qty, cartItems));
     }
     return () => {
       //
@@ -64,6 +64,7 @@ const CartScreen = (props) => {
                             cartItems.map((item) => (
                               <tr>
                                 <td>
+                                  // eslint-disable-next-line
                                   <a href="#">
                                     <img src={item.image} alt="product" />
                                   </a>
@@ -95,6 +96,7 @@ const CartScreen = (props) => {
                                 </td>
                                 <td>${item.price}</td>
                                 <td>
+                                  // eslint-disable-next-line
                                   <a className="remove" href="#">
                                     <fa
                                       onClick={() =>
@@ -125,6 +127,7 @@ const CartScreen = (props) => {
                         </tr>
                       </tbody>
                     </table>
+                    // eslint-disable-next-line
                     <a
                       href="#"
                       className="aa-cart-view-btn"
